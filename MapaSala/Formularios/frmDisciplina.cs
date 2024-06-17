@@ -27,9 +27,9 @@ namespace MapaSala.Formularios
                 dados.Columns.Add(atributos.Name);
             }
 
-            dados.Rows.Add(1, "Matematica", "MAT");
-            dados.Rows.Add(2, "Português", "PORT");
-            dados.Rows.Add(3, "Física", "FIS");
+            dados.Rows.Add(1, "Matematica", "MAT", true);
+            dados.Rows.Add(2, "Português", "PORT", true);
+            dados.Rows.Add(3, "Física", "FIS", false);
 
             dtGridDisciplina.DataSource = dados;
             
@@ -42,7 +42,8 @@ namespace MapaSala.Formularios
             d.Nome = txtNomeDisciplina.Text;
             d.Sigla = txtSigla.Text;
 
-            dados.Rows.Add(d.Linha());
+            dados.Rows.Add( d.Linha() );
+
             LimparCampos();
         }
 
@@ -61,12 +62,24 @@ namespace MapaSala.Formularios
         private void dtGridDisciplina_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             LinhaSelecionada = e.RowIndex;
-            MessageBox.Show("Novo Valor: " + LinhaSelecionada);
+            txtNomeDisciplina.Text = dtGridDisciplina.Rows[LinhaSelecionada].Cells[1].Value.ToString() ;
+            txtSigla.Text = dtGridDisciplina.Rows[LinhaSelecionada].Cells[2].Value.ToString();
+            numId.Value = Convert.ToInt32(dtGridDisciplina.Rows[LinhaSelecionada].Cells[0].Value);
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             dtGridDisciplina.Rows.RemoveAt(LinhaSelecionada);
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow minhamae = dtGridDisciplina.Rows[LinhaSelecionada];
+            minhamae.Cells[0].Value = numId.Value;
+            minhamae.Cells[1].Value = txtNomeDisciplina.Text;
+            minhamae.Cells[2].Value = txtSigla.Text;
+            
+            
         }
     }
 }
