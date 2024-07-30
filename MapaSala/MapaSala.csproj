@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\ProfessorDAO.cs" />
     <Compile Include="Formularios\frmDisciplina.cs">
       <SubType>Form</SubType>
     </Compile>
