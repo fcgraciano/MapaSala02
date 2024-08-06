@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MapaSala.DAO;
 using Model.Entitidades;
 
 namespace MapaSala.Formularios
@@ -16,6 +17,7 @@ namespace MapaSala.Formularios
     {
         DataTable dados;
         int LinhaSelecionada;
+        
 
         public frmDisciplina()
         {
@@ -27,9 +29,9 @@ namespace MapaSala.Formularios
                 dados.Columns.Add(atributos.Name);
             }
 
-            dados.Rows.Add(1, "Matematica", "MAT", true);
-            dados.Rows.Add(2, "Português", "PORT", true);
-            dados.Rows.Add(3, "Física", "FIS", false);
+            //dados.Rows.Add(1, "Matematica", "MAT", true);
+            //dados.Rows.Add(2, "Português", "PORT", true);
+            //dados.Rows.Add(3, "Física", "FIS", false);
 
             dtGridDisciplina.DataSource = dados;
             
