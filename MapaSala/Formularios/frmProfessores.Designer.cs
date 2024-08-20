@@ -38,6 +38,8 @@ namespace MapaSala.Formularios
             this.btnSalvar = new System.Windows.Forms.Button();
             this.dtGridProfessores = new System.Windows.Forms.DataGridView();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridProfessores)).BeginInit();
             this.SuspendLayout();
@@ -104,7 +106,7 @@ namespace MapaSala.Formularios
             // 
             this.dtGridProfessores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGridProfessores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGridProfessores.Location = new System.Drawing.Point(12, 69);
+            this.dtGridProfessores.Location = new System.Drawing.Point(12, 186);
             this.dtGridProfessores.Name = "dtGridProfessores";
             this.dtGridProfessores.Size = new System.Drawing.Size(636, 351);
             this.dtGridProfessores.TabIndex = 7;
@@ -119,11 +121,30 @@ namespace MapaSala.Formularios
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
+            // txtPesquisa
+            // 
+            this.txtPesquisa.Location = new System.Drawing.Point(12, 143);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(313, 20);
+            this.txtPesquisa.TabIndex = 9;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 124);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Pesquisar";
+            // 
             // frmProfessores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 450);
+            this.ClientSize = new System.Drawing.Size(675, 549);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.dtGridProfessores);
             this.Controls.Add(this.btnSalvar);
@@ -154,5 +175,7 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.DataGridView dtGridProfessores;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.TextBox txtPesquisa;
+        private System.Windows.Forms.Label label4;
     }
 }

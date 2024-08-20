@@ -56,5 +56,12 @@ namespace MapaSala.Formularios
             txtNomeCompleto.Text = "";
             numId.Value = 0;
         }
+    
+
+       
+        private void txtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            dtGridProfessores.DataSource = dao.Pesquisar(txtPesquisa.Text);
+        }
     }
 }
