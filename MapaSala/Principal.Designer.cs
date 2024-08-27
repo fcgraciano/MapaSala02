@@ -48,6 +48,7 @@ namespace MapaSala
             this.faltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salasLivresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.todosProfessoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cursoXDisciplinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +74,8 @@ namespace MapaSala
             this.disciplinasToolStripMenuItem,
             this.horáriosToolStripMenuItem,
             this.cursosToolStripMenuItem,
-            this.diasDaSemanaToolStripMenuItem});
+            this.diasDaSemanaToolStripMenuItem,
+            this.cursoXDisciplinaToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(71, 20);
             this.toolStripMenuItem1.Text = "Cadastros";
@@ -194,6 +196,13 @@ namespace MapaSala
             this.todosProfessoresToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.todosProfessoresToolStripMenuItem.Text = "Todos Professores";
             // 
+            // cursoXDisciplinaToolStripMenuItem
+            // 
+            this.cursoXDisciplinaToolStripMenuItem.Name = "cursoXDisciplinaToolStripMenuItem";
+            this.cursoXDisciplinaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cursoXDisciplinaToolStripMenuItem.Text = "Curso X Disciplina";
+            this.cursoXDisciplinaToolStripMenuItem.Click += new System.EventHandler(this.cursoXDisciplinaToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,5 +243,6 @@ namespace MapaSala
         private System.Windows.Forms.ToolStripMenuItem horáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem diasDaSemanaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cursoXDisciplinaToolStripMenuItem;
     }
 }

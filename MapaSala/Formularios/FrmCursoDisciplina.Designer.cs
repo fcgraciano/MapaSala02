@@ -41,14 +41,6 @@ namespace MapaSala.Formularios
             // lsDisciplinas
             // 
             this.lsDisciplinas.FormattingEnabled = true;
-            this.lsDisciplinas.Items.AddRange(new object[] {
-            "Fernando",
-            "Galvani",
-            "Eliete",
-            "Carol",
-            "Malu",
-            "Lucilene",
-            "Thais"});
             this.lsDisciplinas.Location = new System.Drawing.Point(12, 29);
             this.lsDisciplinas.Name = "lsDisciplinas";
             this.lsDisciplinas.Size = new System.Drawing.Size(120, 95);
@@ -66,10 +58,6 @@ namespace MapaSala.Formularios
             // cbxCursos
             // 
             this.cbxCursos.FormattingEnabled = true;
-            this.cbxCursos.Items.AddRange(new object[] {
-            "Desenvolvimento de sistemas Integral",
-            "Administração Integral",
-            "Desenvolvimento de sistemas Noite"});
             this.cbxCursos.Location = new System.Drawing.Point(229, 31);
             this.cbxCursos.Name = "cbxCursos";
             this.cbxCursos.Size = new System.Drawing.Size(121, 21);

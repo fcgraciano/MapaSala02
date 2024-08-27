@@ -9,37 +9,40 @@ using Model.Entitidades;
 
 namespace MapaSala.DAO
 {
-    public class DisciplinaDAO
+    public class CursoDAO
     {
         private string LinhaConexao = "Server=LS05MPF;Database=AULA_DS;User Id=sa;Password=admsasql;";
         private SqlConnection Conexao;
-        public DisciplinaDAO()
+        public CursoDAO()
         {
             Conexao = new SqlConnection(LinhaConexao);
         }
 
-        public void Inserir(DisciplinaEntidade disciplina)
+        public void Inserir(CursoEntidade objeto)
         {
             Conexao.Open();
-            string query = "Insert into Disciplinas (Nome , Sigla) Values (@nome, @sigla) ";
+            string query = "Insert into Cursos (Nome , Turno, Sigla, Ativo) Values (@nome, @turno, @sigla, @ativo) ";
             SqlCommand comando = new SqlCommand(query, Conexao);
 
-            SqlParameter parametro1 = new SqlParameter("@nome", disciplina.Nome);
-            SqlParameter parametro2 = new SqlParameter("@sigla", disciplina.Sigla);
+            SqlParameter parametro1 = new SqlParameter("@nome", objeto.Nome);
+            SqlParameter parametro2 = new SqlParameter("@sigla", objeto.Sigla);
+            SqlParameter parametro3 = new SqlParameter("@ativo", objeto.Ativo);
+            SqlParameter parametro4 = new SqlParameter("@sigla", objeto.Turno);
             comando.Parameters.Add(parametro1);
             comando.Parameters.Add(parametro2);
+            comando.Parameters.Add(parametro3);
+            comando.Parameters.Add(parametro4);
 
             comando.ExecuteNonQuery();
             Conexao.Close();
 
         }
 
-
         public DataTable PreencherComboBox()
         {
             DataTable dataTable = new DataTable();
 
-            string query = "SELECT Id, Nome FROM Disciplinas";
+            string query = "SELECT Id, Nome FROM Cursos";
 
             using (SqlConnection connection = new SqlConnection(LinhaConexao))
             {
@@ -60,13 +63,11 @@ namespace MapaSala.DAO
             return dataTable;
         }
 
-
-
         public DataTable ObterDisciplinas()
         {
             DataTable dt = new DataTable();
             Conexao.Open();
-            string query = "SELECT Id, Nome, Sigla FROM Disciplinas Order by Id desc";
+            string query = "SELECT Nome , Turno, Sigla, Ativo FROM Cursos Order by Id desc";
             SqlCommand comando = new SqlCommand(query, Conexao);
 
             SqlDataReader Leitura = comando.ExecuteReader();
@@ -75,7 +76,7 @@ namespace MapaSala.DAO
             {
                 dt.Columns.Add(atributos.Name);
             }
-            
+
             if (Leitura.HasRows)
             {
                 while (Leitura.Read())
