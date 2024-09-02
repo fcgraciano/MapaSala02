@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\CursoDAO.cs" />
+    <Compile Include="DAO\CursoDisciplinaDAO.cs" />
     <Compile Include="DAO\DisciplinaDAO.cs" />
     <Compile Include="DAO\ProfessorDAO.cs" />
     <Compile Include="DAO\SalasDAO.cs" />
