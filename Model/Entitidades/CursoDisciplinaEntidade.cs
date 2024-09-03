@@ -14,5 +14,10 @@ namespace Model.Entitidades
         public string Periodo { get; set; }
         public string NomeDisciplina { get; set; }
         public string NomeCurso { get; set; }
+
+        public object[] Linha()
+        {
+            return new object[] { Id, NomeCurso, NomeDisciplina };
+        }
     }
 }
