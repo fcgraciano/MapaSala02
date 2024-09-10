@@ -78,10 +78,11 @@ namespace MapaSala.Formularios
             // 
             // dtCursoDisciplina
             // 
+            this.dtCursoDisciplina.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtCursoDisciplina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtCursoDisciplina.Location = new System.Drawing.Point(12, 73);
             this.dtCursoDisciplina.Name = "dtCursoDisciplina";
-            this.dtCursoDisciplina.Size = new System.Drawing.Size(453, 207);
+            this.dtCursoDisciplina.Size = new System.Drawing.Size(841, 378);
             this.dtCursoDisciplina.TabIndex = 5;
             // 
             // cbDisciplinas
@@ -120,7 +121,7 @@ namespace MapaSala.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 310);
+            this.ClientSize = new System.Drawing.Size(865, 463);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbPeriodos);
             this.Controls.Add(this.cbDisciplinas);
@@ -130,6 +131,7 @@ namespace MapaSala.Formularios
             this.Controls.Add(this.cbxCursos);
             this.Controls.Add(this.label1);
             this.Name = "FrmCursoDisciplina";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCursoDisciplina";
             ((System.ComponentModel.ISupportInitialize)(this.dtCursoDisciplina)).EndInit();
             this.ResumeLayout(false);
