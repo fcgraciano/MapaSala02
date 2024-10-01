@@ -60,6 +60,7 @@ namespace MapaSala.Formularios
             this.txtNomeDisciplina.Name = "txtNomeDisciplina";
             this.txtNomeDisciplina.Size = new System.Drawing.Size(147, 20);
             this.txtNomeDisciplina.TabIndex = 1;
+            this.txtNomeDisciplina.TextChanged += new System.EventHandler(this.txtNomeDisciplina_TextChanged);
             // 
             // txtSigla
             // 
@@ -67,6 +68,7 @@ namespace MapaSala.Formularios
             this.txtSigla.Name = "txtSigla";
             this.txtSigla.Size = new System.Drawing.Size(100, 20);
             this.txtSigla.TabIndex = 2;
+            this.txtSigla.TextChanged += new System.EventHandler(this.txtSigla_TextChanged);
             // 
             // label1
             // 
@@ -76,6 +78,7 @@ namespace MapaSala.Formularios
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Sigla";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -85,6 +88,7 @@ namespace MapaSala.Formularios
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nome";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -111,9 +115,12 @@ namespace MapaSala.Formularios
             this.dtGridDisciplina.Location = new System.Drawing.Point(12, 65);
             this.dtGridDisciplina.Name = "dtGridDisciplina";
             this.dtGridDisciplina.ReadOnly = true;
-            this.dtGridDisciplina.Size = new System.Drawing.Size(616, 359);
+            this.dtGridDisciplina.Size = new System.Drawing.Size(652, 359);
             this.dtGridDisciplina.TabIndex = 7;
             this.dtGridDisciplina.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridDisciplina_CellClick);
+            this.dtGridDisciplina.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridDisciplina_CellContentDoubleClick);
+            this.dtGridDisciplina.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridDisciplina_CellDoubleClick);
+            this.dtGridDisciplina.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dtGridDisciplina_MouseDoubleClick);
             // 
             // btnLimpar
             // 
