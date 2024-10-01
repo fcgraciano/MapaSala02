@@ -16,5 +16,7 @@ namespace MapaSala.Formularios.Editar
         {
             InitializeComponent();
         }
+
+       
     }
 }

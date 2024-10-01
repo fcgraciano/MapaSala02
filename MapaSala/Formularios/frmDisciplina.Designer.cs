@@ -60,7 +60,7 @@ namespace MapaSala.Formularios
             this.txtNomeDisciplina.Name = "txtNomeDisciplina";
             this.txtNomeDisciplina.Size = new System.Drawing.Size(147, 20);
             this.txtNomeDisciplina.TabIndex = 1;
-            this.txtNomeDisciplina.TextChanged += new System.EventHandler(this.txtNomeDisciplina_TextChanged);
+            
             // 
             // txtSigla
             // 
@@ -68,7 +68,7 @@ namespace MapaSala.Formularios
             this.txtSigla.Name = "txtSigla";
             this.txtSigla.Size = new System.Drawing.Size(100, 20);
             this.txtSigla.TabIndex = 2;
-            this.txtSigla.TextChanged += new System.EventHandler(this.txtSigla_TextChanged);
+            
             // 
             // label1
             // 
@@ -78,7 +78,7 @@ namespace MapaSala.Formularios
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Sigla";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // label2
             // 
@@ -88,7 +88,7 @@ namespace MapaSala.Formularios
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nome";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            
             // 
             // label3
             // 
