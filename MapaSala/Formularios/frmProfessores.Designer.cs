@@ -106,7 +106,7 @@ namespace MapaSala.Formularios
             // 
             this.dtGridProfessores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGridProfessores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGridProfessores.Location = new System.Drawing.Point(12, 186);
+            this.dtGridProfessores.Location = new System.Drawing.Point(12, 91);
             this.dtGridProfessores.Name = "dtGridProfessores";
             this.dtGridProfessores.Size = new System.Drawing.Size(636, 351);
             this.dtGridProfessores.TabIndex = 7;
@@ -123,7 +123,7 @@ namespace MapaSala.Formularios
             // 
             // txtPesquisa
             // 
-            this.txtPesquisa.Location = new System.Drawing.Point(12, 143);
+            this.txtPesquisa.Location = new System.Drawing.Point(71, 56);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(313, 20);
             this.txtPesquisa.TabIndex = 9;
@@ -132,7 +132,7 @@ namespace MapaSala.Formularios
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 124);
+            this.label4.Location = new System.Drawing.Point(12, 59);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 10;
@@ -142,7 +142,7 @@ namespace MapaSala.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 549);
+            this.ClientSize = new System.Drawing.Size(675, 461);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPesquisa);
             this.Controls.Add(this.btnLimpar);

@@ -94,18 +94,16 @@ namespace MapaSala.Formularios
 
         private void dtGridDisciplina_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            //frmEditarDisciplina editar = new frmEditarDisciplina();
-            //editar.ShowDialog();
-
-            if (e.RowIndex >= 0) // Verifica se a linha clicada é válida
+            if (e.RowIndex >= 0) 
             {
-                string nome = dtGridDisciplina.Rows[e.RowIndex].Cells[0].Value.ToString();
-                int idade = Convert.ToInt32(dtGridDisciplina.Rows[e.RowIndex].Cells[1].Value);
+                int id = Convert.ToInt32(
+                    dtGridDisciplina.Rows[e.RowIndex].Cells[0].Value);
+                
 
-                frmEditarDisciplina editar = new frmEditarDisciplina();
+                frmEditarDisciplina editar = new frmEditarDisciplina(id);
 
                 // Inscreve-se no evento
-                editar.FormClosed += Fechou_Editar_FormClosed;
+                //editar.FormClosed += Fechou_Editar_FormClosed;
 
                 editar.ShowDialog(); // Abre o formulário como um diálogo modal
             }
