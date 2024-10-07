@@ -103,7 +103,7 @@ namespace MapaSala.Formularios
                 frmEditarDisciplina editar = new frmEditarDisciplina(id);
 
                 // Inscreve-se no evento
-                //editar.FormClosed += Fechou_Editar_FormClosed;
+                editar.FormClosed += Fechou_Editar_FormClosed;
 
                 editar.ShowDialog(); // Abre o formulário como um diálogo modal
             }
@@ -111,7 +111,7 @@ namespace MapaSala.Formularios
 
         private void Fechou_Editar_FormClosed(object sender, FormClosedEventArgs e)
         {
-            MessageBox.Show("Fechou o Form e atualiza o grid");
+            
             dtGridDisciplina.DataSource = dao.ObterDisciplinas();
         }
 
