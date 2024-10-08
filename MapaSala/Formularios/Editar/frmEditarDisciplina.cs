@@ -95,5 +95,10 @@ namespace MapaSala.Formularios.Editar
                 MessageBox.Show("Erro ao excluir", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void frmEditarDisciplina_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
