@@ -1,8 +1,12 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MapaSala.BD
 {
@@ -11,9 +15,10 @@ namespace MapaSala.BD
         private string server = "localhost";
         private string user = "root";
         private string password = "";
-        private string db_name = "AULA_DS";
+        private string db_name = "mysql";
 
-        private void CreateDatabase()
+
+        public void CreateDatabase()
         {
             string sql = "CREATE DATABASE AULA_DS;" +
                 "USE AULA_DS;" +
@@ -52,6 +57,61 @@ namespace MapaSala.BD
                 "" +
                 "" +
                 "";
+            try
+            {
+                MySqlConnection Conexao = obterConexao();
+                MySqlCommand comando = new MySqlCommand(sql, Conexao);
+                comando.ExecuteNonQuery();
+                Conexao.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Aconteceu algo inesperado: " + ex.Message,"Mensagem",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                
+            }
+           
+
         }
+
+        public void DropDatabase()
+        {
+            string sql = "DROP DATABASE AULA_DS;" +
+                "";
+            try
+            {
+                MySqlConnection Conexao = obterConexao();
+                MySqlCommand comando = new MySqlCommand(sql, Conexao);
+                comando.ExecuteNonQuery();
+                Conexao.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Aconteceu algo inesperado: " + ex.Message, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+
+
+        }
+
+
+
+        public MySqlConnection obterConexao()
+        {
+            MySqlConnection conn = new MySqlConnection($"Server={server};Database={db_name};Uid={user};password={password}");
+            try
+            {
+                conn.Open();
+            }
+            catch (Exception ex)
+            {
+                conn = null;
+                MessageBox.Show("Erro na conexão: " + ex.Message);
+
+            }
+
+            return conn;
+        }
+
+      
     }
 }

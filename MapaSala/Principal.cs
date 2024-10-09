@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MapaSala.BD;
 using MapaSala.Formularios;
 
 namespace MapaSala
 {
     public partial class Principal : Form
     {
+        public static string LinhaConexao = "Server=localhost;Database=AULA_DS;Uid=root;password=";
         public Principal()
         {
             InitializeComponent();
@@ -50,6 +52,37 @@ namespace MapaSala
         {
             FrmCursoDisciplina c = new FrmCursoDisciplina();
             c.ShowDialog();
+        }
+
+        private void criarBancoDeDadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Database db = new Database();
+                db.CreateDatabase();
+                MessageBox.Show("Banco de dados criado com sucesso", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Ocorreu algum erro, você ligou o xampp ?");
+            }
+            
+        }
+
+        private void excluirOBancoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Database db = new Database();
+                db.DropDatabase();
+                MessageBox.Show("Banco de dados excluido com sucesso", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Ocorreu algum erro, você ligou o xampp ?");
+            }
         }
     }
 }
