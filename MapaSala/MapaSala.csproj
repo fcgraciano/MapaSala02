@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BD\Database.cs" />
+    <Compile Include="Classes\Usuarios.cs" />
     <Compile Include="DAO\CursoDAO.cs" />
     <Compile Include="DAO\CursoDisciplinaDAO.cs" />
     <Compile Include="DAO\DisciplinaDAO.cs" />
@@ -57,6 +58,12 @@
     </Compile>
     <Compile Include="Formularios\Cadastrar\frmCadastrarDisciplina.Designer.cs">
       <DependentUpon>frmCadastrarDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Cadastrar\frmCadastrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cadastrar\frmCadastrarUsuario.Designer.cs">
+      <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Editar\frmEditarDisciplina.cs">
       <SubType>Form</SubType>
@@ -111,6 +118,9 @@
     <EmbeddedResource Include="Formularios\Cadastrar\frmCadastrarDisciplina.resx">
       <DependentUpon>frmCadastrarDisciplina.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cadastrar\frmCadastrarUsuario.resx">
+      <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Editar\frmEditarDisciplina.resx">
       <DependentUpon>frmEditarDisciplina.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSalas.resx">
       <DependentUpon>frmSalas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MapaSala.resx">
       <DependentUpon>MapaSala.cs</DependentUpon>
