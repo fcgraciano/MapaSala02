@@ -100,29 +100,24 @@ INSERT INTO SALAS (Nome, NumeroComputadores, NumeroCadeiras, IsLab, Disponivel  
 ('SALA 26',1,40,0,1);
 
 INSERT INTO CURSOS (Nome, Turno, Sigla, Ativo) VALUES
-('2ºADM-N - Técnico em Administração', '', '',1),
-('ADM-N - Técnico em Administração', '', '',1),
-('ADMINT-N - Administração Integrado ao Ensino Médio (Mtec Noturno)', '', '',1),
-('ADM PI - Administração Integrado ao Ensino Médio PI', '', '',1),
-('ADMINT-Z - Administração Integrado ao Ensino Médio - Parceria SEE EE Dr Luiz Zuiani', '', '',1),
-('ADMIN-Z2 - Administração Integrado ao Ensino Médio - Parceria SEE EE Dr Luiz Zuiani', '', '',1),
-('DS-N - Técnico em Desenvolvimento de Sistemas', '', '',1),
-('DS AMS-T - Desenvolvimento de Sistemas Integrado ao Ensino Médio AMS ', '', '',1),
-('DSPI - Desenvolvimento de Sistemas Integrado ao Ensino Médio PI ', '', '',1),
-('DSINT-Z - Desenvolvimento de Sistemas Integrado ao Ensino Médio Parceria SEE EE DR Lu ', '', '',1),
-('ENF-M - Técnico em Enfermagem ', '', '',1),
-('ENF-T - Técnico em Enfermagem ', '', '',1),
-('IFCHS-M - Ensino Médio com Itinerário Formativo de Ciências Humanas e Sociais Aplicad ', '', '',1),
-(' INFNETMT - Informática para Internet Integrado ao Ensino Médio Mtec', '', '',1),
-('INFNET-E - Informática p/ Internet Integrado ao Ensino Médio-Parc SEE EE Ernesto Monte ', '', '',1),
-('INFNET-Z - Informática p/ Internet Integrado ao Ensino Médio-Parc SEE EE Dr Luiz Zuian ', '', '',1),
-('LOG-N EM - Técnico em Logística (Ernesto Monte) ', '', '',1),
-('LOG-N AG - Técnico em Logística (Agudos) ', '', '',1),
-('LOGINT-T - Logística Integrado ao Ensino Médio - Mtec ', '', '',1),
-('RH-N - Técnico em Recursos Humanos ', '', '',1),
-('SB-N - Técnico em Saúde Bucal ', '', '',1),
-('SEG-N - Técnico em Segurança do Trabalho ', '', '',1),
-('SJINT-T - Serviços Jurídicos Integrado ao Ensino Médio - Mtec ', '', '',1);
+
+('Técnico em Administração', 'Noite', 'ADM-N',1),
+('Administração Integrado ao Ensino Médio (Mtec Noturno)', 'Noite', 'ADM-MTEC-N',1),
+('Administração Integrado ao Ensino Médio PI', 'Integral', 'ADM-PI',1),
+('Técnico em Desenvolvimento de Sistemas', 'Noite', 'DS-N',1),
+('Desenvolvimento de Sistemas Integrado ao Ensino Médio AMS', 'Tarde', 'AMS-T ',1),
+('Desenvolvimento de Sistemas Integrado ao Ensino Médio PI ', 'Integral', 'DS-PI',1),
+('Técnico em Enfermagem ', 'Manhã', 'ENF-M',1),
+('Técnico em Enfermagem ', 'Tarde', 'ENF-T',1),
+('Ensino Médio com Itinerário Formativo de Ciências Humanas e Sociais Aplicadas', 'Manhã', 'IFCHS-M',1),
+('Informática para Internet Integrado ao Ensino Médio Mtec', 'Tarde', 'INFO-MTEC-T',1),
+('Técnico em Logística (Ernesto Monte) ', 'Noite', 'LOG-N EM',1),
+('Técnico em Logística (Agudos) ', 'Noite', 'LOG-N AG',1),
+('Logística Integrado ao Ensino Médio - Mtec ', '', 'LOG-MTEC-T',1),
+('Técnico em Recursos Humanos ', 'Noite', 'RH-N',1),
+('Técnico em Saúde Bucal ', 'Noite', 'SB-N',1),
+('Técnico em Segurança do Trabalho ', 'Noite', 'SEG-N',1),
+('Serviços Jurídicos Integrado ao Ensino Médio - Mtec ', 'Tarde', 'SJ-MTEC-T',1);
 
 
 
