@@ -12,7 +12,7 @@ namespace MapaSala.DAO
     public class CursoDAO
     {
         private string LinhaConexao = "Server=LS05MPF;Database=AULA_DS;User Id=sa;Password=admsasql;";
-        private SqlConnection Conexao = new SqlConnection(LinhaConexao);
+        private SqlConnection Conexao;
         public CursoDAO()
         {
             Conexao = new SqlConnection(LinhaConexao);
