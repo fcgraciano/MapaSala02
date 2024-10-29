@@ -19,7 +19,7 @@
 ,('Ética e Cidadania Organizacional','E.C.O',1)
 ,('Laboratório de Mediação e Intervenção Sociocultural','L. M. I. S.',1)
 ,('Laboratório de Processos Criativos','L. P. C.',1)
-,('Língua Estrangeira Moderna - Inglês e Comunicação Profissional','LING EST MODER',1)
+,('Língua Estrangeira Moderna - Inglês e Comunicação Profissional','LING. EST. MODER.',1)
 ,('Língua Portuguesa, Literatura e Comunicação Profissional','PORT L.P.L.C.P.',1)
 ,('Análise e Projeto de Sistemas','APS',1)
 ,('Design Digital','DD',1)
