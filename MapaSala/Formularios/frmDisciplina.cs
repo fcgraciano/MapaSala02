@@ -64,5 +64,10 @@ namespace MapaSala.Formularios
             cadastro.FormClosed += Fechou_Editar_FormClosed;
             cadastro.ShowDialog();
         }
+
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

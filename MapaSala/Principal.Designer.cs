@@ -37,6 +37,7 @@ namespace MapaSala
             this.horáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diasDaSemanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cursoXDisciplinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salvarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +49,7 @@ namespace MapaSala
             this.faltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salasLivresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.todosProfessoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cursoXDisciplinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +76,8 @@ namespace MapaSala
             this.horáriosToolStripMenuItem,
             this.cursosToolStripMenuItem,
             this.diasDaSemanaToolStripMenuItem,
-            this.cursoXDisciplinaToolStripMenuItem});
+            this.cursoXDisciplinaToolStripMenuItem,
+            this.usuariosToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(71, 20);
             this.toolStripMenuItem1.Text = "Cadastros";
@@ -119,6 +121,13 @@ namespace MapaSala
             this.diasDaSemanaToolStripMenuItem.Name = "diasDaSemanaToolStripMenuItem";
             this.diasDaSemanaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.diasDaSemanaToolStripMenuItem.Text = "Dias da Semana";
+            // 
+            // cursoXDisciplinaToolStripMenuItem
+            // 
+            this.cursoXDisciplinaToolStripMenuItem.Name = "cursoXDisciplinaToolStripMenuItem";
+            this.cursoXDisciplinaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cursoXDisciplinaToolStripMenuItem.Text = "Curso X Disciplina";
+            this.cursoXDisciplinaToolStripMenuItem.Click += new System.EventHandler(this.cursoXDisciplinaToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
@@ -196,12 +205,12 @@ namespace MapaSala
             this.todosProfessoresToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.todosProfessoresToolStripMenuItem.Text = "Todos Professores";
             // 
-            // cursoXDisciplinaToolStripMenuItem
+            // usuariosToolStripMenuItem
             // 
-            this.cursoXDisciplinaToolStripMenuItem.Name = "cursoXDisciplinaToolStripMenuItem";
-            this.cursoXDisciplinaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cursoXDisciplinaToolStripMenuItem.Text = "Curso X Disciplina";
-            this.cursoXDisciplinaToolStripMenuItem.Click += new System.EventHandler(this.cursoXDisciplinaToolStripMenuItem_Click);
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuários";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -244,5 +253,6 @@ namespace MapaSala
         private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem diasDaSemanaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cursoXDisciplinaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
     }
 }

@@ -71,6 +71,12 @@
     <Compile Include="Formularios\Editar\frmEditarDisciplina.Designer.cs">
       <DependentUpon>frmEditarDisciplina.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Editar\frmEditarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Editar\frmEditarUsuarios.Designer.cs">
+      <DependentUpon>frmEditarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmCursoDisciplina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Editar\frmEditarDisciplina.resx">
       <DependentUpon>frmEditarDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Editar\frmEditarUsuarios.resx">
+      <DependentUpon>frmEditarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCursoDisciplina.resx">
       <DependentUpon>FrmCursoDisciplina.cs</DependentUpon>

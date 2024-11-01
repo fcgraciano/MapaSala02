@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.dtgridUsuarios = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgridUsuarios)).BeginInit();
@@ -49,22 +49,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Usuários";
             // 
-            // btnNovo
-            // 
-            this.btnNovo.Location = new System.Drawing.Point(6, 19);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(107, 23);
-            this.btnNovo.TabIndex = 0;
-            this.btnNovo.Text = "Novo Usuário";
-            this.btnNovo.UseVisualStyleBackColor = true;
-            // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.Location = new System.Drawing.Point(186, 19);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(478, 20);
-            this.txtPesquisar.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -74,13 +58,36 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Pesquisar";
             // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.Location = new System.Drawing.Point(186, 19);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(478, 20);
+            this.txtPesquisar.TabIndex = 1;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Location = new System.Drawing.Point(6, 19);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(107, 23);
+            this.btnNovo.TabIndex = 0;
+            this.btnNovo.Text = "Novo Usuário";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
             // dtgridUsuarios
             // 
+            this.dtgridUsuarios.AllowUserToAddRows = false;
+            this.dtgridUsuarios.AllowUserToDeleteRows = false;
+            this.dtgridUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgridUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgridUsuarios.Location = new System.Drawing.Point(12, 74);
             this.dtgridUsuarios.Name = "dtgridUsuarios";
+            this.dtgridUsuarios.ReadOnly = true;
             this.dtgridUsuarios.Size = new System.Drawing.Size(756, 364);
             this.dtgridUsuarios.TabIndex = 1;
+            this.dtgridUsuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgridUsuarios_CellDoubleClick);
             // 
             // frmUsuarios
             // 
@@ -90,7 +97,8 @@
             this.Controls.Add(this.dtgridUsuarios);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmUsuarios";
-            this.Text = "frmUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Usuários";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgridUsuarios)).EndInit();
