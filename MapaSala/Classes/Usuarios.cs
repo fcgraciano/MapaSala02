@@ -63,11 +63,11 @@ namespace MapaSala.Classes
             string query = "";
             if (string.IsNullOrEmpty(pesquisa))
             {
-                query = "SELECT Login, Ativo Nome FROM Usuarios order by Id desc";
+                query = "SELECT Id, Login, Ativo Nome FROM Usuarios order by Id desc";
             }
             else
             {
-                query = "SELECT Login, Ativo Nome FROM Usuarios Where Login like '%" + pesquisa + "%' Order by Id desc";
+                query = "SELECT Id, Login, Ativo Nome FROM Usuarios Where Login like '%" + pesquisa + "%' Order by Id desc";
             }
            
             SqlDataAdapter adapter = new SqlDataAdapter(query, Conexao);
