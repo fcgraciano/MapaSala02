@@ -57,5 +57,15 @@ namespace MapaSala
             frmUsuarios usuarios = new frmUsuarios();
             usuarios.ShowDialog();
         }
+
+        private void Principal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
