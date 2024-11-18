@@ -29,6 +29,9 @@ namespace MapaSala
                 Principal p = new Principal();
                 p.FormClosed += FecharForm;
                 this.Hide();
+                txtLogin.Text = "";
+                txtSenha.Text = "";
+                txtLogin.Focus();
                 p.Show();
             }
             else
@@ -40,6 +43,14 @@ namespace MapaSala
         private void FecharForm(object sender, FormClosedEventArgs e)
         {
             Visible = true;
+        }
+
+        private void txtSenha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 13)
+            {
+                btnEntrar_Click(sender, e);
+            }
         }
     }
 }

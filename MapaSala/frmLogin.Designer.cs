@@ -53,7 +53,7 @@ namespace MapaSala
             this.txtLogin.Location = new System.Drawing.Point(12, 137);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(400, 56);
-            this.txtLogin.TabIndex = 1;
+            this.txtLogin.TabIndex = 0;
             // 
             // txtSenha
             // 
@@ -62,7 +62,8 @@ namespace MapaSala
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(400, 56);
-            this.txtSenha.TabIndex = 2;
+            this.txtSenha.TabIndex = 1;
+            this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha_KeyPress);
             // 
             // btnEntrar
             // 
@@ -70,7 +71,7 @@ namespace MapaSala
             this.btnEntrar.Location = new System.Drawing.Point(12, 334);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(400, 64);
-            this.btnEntrar.TabIndex = 3;
+            this.btnEntrar.TabIndex = 2;
             this.btnEntrar.Text = "ENTRAR";
             this.btnEntrar.UseVisualStyleBackColor = true;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
@@ -97,7 +98,7 @@ namespace MapaSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(424, 450);
+            this.ClientSize = new System.Drawing.Size(424, 422);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnEntrar);
